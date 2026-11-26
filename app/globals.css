@@ -1,0 +1,68 @@
+// Colours from AMZ Pathfinder — navy + orange, nothing fancy.
+:root{
+  --navy:#004D6D; --navy-dark:#03384E; --navy-deep:#022A3B;
+  --orange:#F3952D; --orange-dark:#DE7F14; --orange-light:#FFF3E2;
+  --bg:#FFFFFF; --bg-soft:#F2F6F7; --bg-mint:#EAF4F6;
+  --text:#1B2A33; --muted:#5B6E79; --line:#E2E2EA; --white:#fff;
+  --radius:16px; --shadow:0 10px 30px rgba(0,77,109,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto}
+h1,h2,h3{line-height:1.15;color:var(--navy-dark);margin:0 0 12px}
+h1{font-size:clamp(2.1rem,5vw,3.6rem);letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem,3.5vw,2.4rem);letter-spacing:-.015em}
+h3{font-size:1.15rem}
+p{margin:0 0 14px;color:var(--muted)}
+.container{max-width:1180px;margin:0 auto;padding:0 20px}
+.section{padding:72px 0}
+.section-soft{background:var(--bg-soft)}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-dark);background:var(--orange-light);border:1px solid #FBD9A8;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+.lead{font-size:1.13rem;max-width:720px}
+.btn{display:inline-block;background:var(--orange);color:#fff;font-weight:700;padding:14px 24px;border-radius:999px;border:0;cursor:pointer;font-size:1rem}
+.btn:hover{background:var(--orange-dark)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-dark)}
+.btn-ghost{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:800;font-size:1.35rem;color:var(--navy-dark);letter-spacing:-.02em}
+.logo span{color:var(--orange)}
+.nav-links{display:flex;gap:22px;font-weight:600;font-size:.95rem;color:var(--navy-dark)}
+.nav-links a:hover{color:var(--orange-dark)}
+.hero{background:linear-gradient(180deg,#EAF4F6 0%,#fff 100%);padding:76px 0 64px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.hero-stats{display:flex;gap:18px;flex-wrap:wrap;margin:26px 0}
+.stat b{display:block;font-size:1.6rem;color:var(--navy)}
+.stat span{font-size:.85rem;color:var(--muted)}
+.hero-card{background:var(--navy);color:#fff;border-radius:20px;padding:26px;box-shadow:var(--shadow)}
+.hero-card h3{color:#fff}
+.hero-card p{color:#CDE3EC}
+.hero-card .big{font-size:2.4rem;font-weight:800;color:var(--orange)}
+.grid{display:grid;gap:20px}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 4px 16px rgba(0,77,109,.05)}
+.card:hover{border-color:var(--orange);box-shadow:var(--shadow)}
+.card .icon{font-size:1.7rem}
+.tag{display:inline-block;font-size:.75rem;font-weight:700;color:var(--navy);background:var(--bg-mint);padding:4px 10px;border-radius:999px;margin-bottom:10px}
+.case-metric{font-size:1.9rem;font-weight:800;color:var(--orange)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:step}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;position:relative}
+.step::before{content:counter(step);counter-increment:step;display:inline-flex;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;align-items:center;justify-content:center;font-weight:800;margin-bottom:12px}
+.faq details{border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:12px;background:#fff}
+.faq summary{cursor:pointer;font-weight:700;color:var(--navy-dark)}
+.form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow)}
+.form label{display:block;font-weight:600;font-size:.9rem;margin:14px 0 6px;color:var(--navy-dark)}
+.form input,.form select,.form textarea{width:100%;padding:12px 14px;border:1px solid #CBD8DE;border-radius:10px;font:inherit}
+footer.site{background:var(--navy-deep);color:#BFD9E3;padding:56px 0 28px}
+footer.site h3,footer.site h4{color:#fff}
+footer.site a:hover{color:var(--orange)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px}
+@media(max-width:860px){
+  .hero-grid,.grid-3,.grid-2,.steps,.footer-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .section{padding:52px 0}
+}
