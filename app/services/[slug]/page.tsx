@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import AuditForm from '@/components/AuditForm';
+import Icon from '@/components/Icons';
 import { services } from '@/lib/services';
 
 // One template, 8 service pages — same shape as Pathfinder's service pages.
@@ -28,7 +29,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       <section className="hero-light">
         <div className="container hero-grid">
           <div className="fade-up">
-            <span className="eyebrow">{s.icon} {s.title}</span>
+            <span className="eyebrow"><Icon name={s.icon} size={15} /> {s.title}</span>
             <h1>{s.title}</h1>
             <p className="lead">{s.hero}</p>
             <p><a className="btn btn-pulse" href="/contact">Schedule a Free Audit →</a>{' '}<a className="btn btn-navy" href="/services">All Services</a></p>
@@ -74,7 +75,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           <div className="grid grid-2" style={{ marginTop: 24 }}>
             {others.map((o) => (
               <article className="card" key={o.slug}>
-                <h3>{o.icon} {o.title}</h3><p>{o.short}</p>
+                <h3><Icon name={o.icon} size={20} /> {o.title}</h3><p>{o.short}</p>
                 <p><a href={`/services/${o.slug}`}><b>Learn more →</b></a></p>
               </article>
             ))}
