@@ -4,6 +4,7 @@ import Counter from '@/components/Counter';
 import Calculators from '@/components/Calculators';
 import Icon from '@/components/Icons';
 import CaseCarousel from '@/components/CaseCarousel';
+import ProfitSimulator from '@/components/ProfitSimulator';
 
 // Homepage rebuilt Pathfinder-style: light hero, floating cards, carousel,
 // survey, lead magnet, blog + podcast bands — same StoreStride content.
@@ -74,9 +75,10 @@ export default function Home() {
           <div className="hero-visual fade-up-2">
             <div className="hero-shape" />
             <div className="hero-photo">
-              <div>
+              <img src="/images/hero-team.jpg" alt="The StoreStride team working on Amazon ad campaigns" />
+              <div className="hero-photo-caption">
                 <p className="big">40% Net Margin</p>
-                <p style={{ color: '#fff' }}>Supplement brand: $1.5M in 12 months — Amazon PPC only</p>
+                <p>Supplement brand: $1.5M in 12 months — Amazon PPC only</p>
               </div>
             </div>
             <div className="float-card fc-1">★★★★★ Excellent<small>5.0 client rated</small></div>
@@ -92,6 +94,16 @@ export default function Home() {
           <span>Join 65+ brands trusting StoreStride</span><span>Supplements</span><span>Home &amp; Garden</span><span>Pet Supplies</span><span>Beauty &amp; Health</span><span>Baby Products</span><span>Kitchen &amp; Home</span><span>Sports &amp; Outdoors</span><span>Apparel</span>
         </div>
       </div>
+
+      {/* Profit simulator — interactive: move the sliders, see your wasted spend */}
+      <section className="section section-soft" aria-labelledby="simulator">
+        <div className="container">
+          <span className="eyebrow">Try It Yourself — 30 Seconds</span>
+          <h2 id="simulator">See what better ACOS is worth to you</h2>
+          <p className="lead">Most sellers lose thousands a month to wasted ad spend without realising it. Move the sliders — this is the same maths we run on every free audit.</p>
+          <div style={{ marginTop: 24 }}><ProfitSimulator /></div>
+        </div>
+      </section>
 
       {/* Meet our clients — case carousel */}
       <section className="section" aria-labelledby="clients">
@@ -113,6 +125,7 @@ export default function Home() {
             <p><a className="btn" href="/contact"><Icon name="phone" size={17} /> Book a Call</a></p>
           </div>
           <div className="card">
+            <img className="img-card" src="/images/meeting.jpg" alt="StoreStride specialists reviewing a client's growth numbers together" />
             <p className="quote">“A professional service so aligned with your revenue goals and communication style, you&apos;ll swear it&apos;s your own in-house team.”</p>
             <p><b>Muhammad Moin</b>, Founder &amp; CEO, StoreStride</p>
             <p>“Most Amazon sellers I speak to have the same story — they tried running ads themselves, burned through budget, maybe hired a big agency that assigned them a junior account manager and disappeared. That&apos;s exactly why I built StoreStride.”</p>
@@ -217,9 +230,9 @@ export default function Home() {
           <span className="eyebrow">StoreStride&apos;s In The Wild</span>
           <h2 id="wild">From the blog and the podcast</h2>
           <div className="grid grid-3" style={{ marginTop: 24 }}>
-            <article className="card"><span className="tag">Blog</span><h3>When should your business consider using Amazon DSP?</h3><p>DSP is not just for big brands. Here is how to know when retargeting will pay for itself.</p><p><a href="/blog"><b>Read →</b></a></p></article>
-            <article className="card"><span className="tag">Blog</span><h3>ACOS vs TACOS: the number that actually matters</h3><p>Most sellers optimise the wrong metric. Here is the one we judge every account on.</p><p><a href="/blog"><b>Read →</b></a></p></article>
-            <article className="card"><span className="tag">Podcast</span><h3>Holiday lessons for Q1 wins</h3><p>What the busiest quarter teaches you about the quiet one — and how to plan for it.</p><p><a href="/podcast"><b>Listen →</b></a></p></article>
+            <article className="card"><img className="img-card" src="/images/warehouse.jpg" alt="Amazon warehouse shelves packed with products ready to ship" /><span className="tag">Blog</span><h3>When should your business consider using Amazon DSP?</h3><p>DSP is not just for big brands. Here is how to know when retargeting will pay for itself.</p><p><a href="/blog"><b>Read →</b></a></p></article>
+            <article className="card"><img className="img-card" src="/images/analytics.jpg" alt="Laptop showing advertising performance charts and analytics" /><span className="tag">Blog</span><h3>ACOS vs TACOS: the number that actually matters</h3><p>Most sellers optimise the wrong metric. Here is the one we judge every account on.</p><p><a href="/blog"><b>Read →</b></a></p></article>
+            <article className="card"><img className="img-card" src="/images/checkout.jpg" alt="Online shopping and checkout on a phone and laptop" /><span className="tag">Podcast</span><h3>Holiday lessons for Q1 wins</h3><p>What the busiest quarter teaches you about the quiet one — and how to plan for it.</p><p><a href="/podcast"><b>Listen →</b></a></p></article>
           </div>
           <p style={{ marginTop: 20 }}><a className="btn btn-navy" href="/blog">View All Blogs →</a></p>
         </div>
