@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 
 // Change this when the live domain changes — sitemap + canonical use it too.
-const SITE_URL = 'https://storestride-website.vercel.app';
+const SITE_URL = 'https://storestride.vercel.app';
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 const SITE_NAME = 'StoreStride';
 
@@ -12,7 +12,7 @@ export const viewport: Viewport = { width: 'device-width', initialScale: 1, them
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'StoreStride | Amazon PPC Agency UK | Full-Funnel Amazon Advertising',
+    default: 'Full-Service Amazon Marketing Agency | StoreStride',
     template: '%s | StoreStride — Amazon PPC Agency UK',
   },
   description:
