@@ -102,6 +102,13 @@ footer.site a:hover{color:var(--orange)}
 .fade-up-2{animation:fadeUp .7s .22s ease both}
 .fade-up-3{animation:fadeUp .7s .34s ease both}
 .btn-pulse{animation:pulseGlow 2.4s ease-in-out infinite}
+/* Clean line icons — white on dark/orange, navy on light */
+.card .icon{color:var(--navy)}
+.card-dark .icon{color:#FFB85C}
+.dropdown a svg{color:var(--navy)}
+.btn svg{flex-shrink:0}
+.eyebrow svg{color:var(--orange-dark)}
+.float-card svg{color:var(--teal)}
 /* Pathfinder-style nav — white bar, hover dropdowns, orange pill CTA */
 .nav-toggle{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer;color:var(--navy-dark)}
 .nav-links{align-items:center}

@@ -62,6 +62,7 @@ const jsonLd = {
 };
 
 import Navbar from '@/components/Navbar';
+import Icon from '@/components/Icons';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -78,7 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <h3>StoreStride</h3>
               <p>Full-funnel Amazon advertising agency helping brands scale revenue with data-driven PPC strategies and transparent, no-fluff reporting.</p>
               <p>Amazon Ads Partner Network Member · Helium 10 Partner · PickFu Certified</p>
-              <p><a className="btn" href="/contact">📞 Book a Call</a></p>
+              <p><a className="btn" href="/contact"><Icon name="phone" size={17} /> Book a Call</a></p>
             </div>
             <div>
               <h4>Services</h4>

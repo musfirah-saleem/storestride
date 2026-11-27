@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import AuditForm from '@/components/AuditForm';
 import Counter from '@/components/Counter';
 import Calculators from '@/components/Calculators';
+import Icon from '@/components/Icons';
 import CaseCarousel from '@/components/CaseCarousel';
 
 // Homepage rebuilt Pathfinder-style: light hero, floating cards, carousel,
@@ -28,20 +29,20 @@ const faqLd = {
 };
 
 const secret = [
-  { icon: '📊', title: 'Data driven approach', text: 'Data comes first — it drives our decisions at the macro account level to the micro hourly level, so you get the best results for your campaigns.' },
-  { icon: '⚡', title: 'Advanced bidding', text: 'We use the best features Amazon can offer — Amazon Marketing Stream and DayParting — to spend when it is most profitable for you.' },
-  { icon: '💬', title: 'Clear and proactive communication', text: 'A dedicated team gives fast, efficient and frequent updates, keeping you in the loop. An ‘in-house’ feeling is a rarity in the Amazon space.' },
-  { icon: '📈', title: 'Personalised reporting', text: 'Clean, informative and tailored reporting on the metrics you care about — ACOS, TACOS, ROAS, revenue contribution and organic rank. No vanity metrics.' },
-  { icon: '🏅', title: 'Experienced', text: 'Our team has 5+ years of Amazon PPC experience across 50+ brands. Whatever you are facing in your Amazon journey, we have seen it before.' },
+  { icon: 'chart', title: 'Data driven approach', text: 'Data comes first — it drives our decisions at the macro account level to the micro hourly level, so you get the best results for your campaigns.' },
+  { icon: 'bolt', title: 'Advanced bidding', text: 'We use the best features Amazon can offer — Amazon Marketing Stream and DayParting — to spend when it is most profitable for you.' },
+  { icon: 'chat', title: 'Clear and proactive communication', text: 'A dedicated team gives fast, efficient and frequent updates, keeping you in the loop. An ‘in-house’ feeling is a rarity in the Amazon space.' },
+  { icon: 'chart', title: 'Personalised reporting', text: 'Clean, informative and tailored reporting on the metrics you care about — ACOS, TACOS, ROAS, revenue contribution and organic rank. No vanity metrics.' },
+  { icon: 'award', title: 'Experienced', text: 'Our team has 5+ years of Amazon PPC experience across 50+ brands. Whatever you are facing in your Amazon journey, we have seen it before.' },
 ];
 
 const homeServices = [
-  { icon: '🎯', slug: 'amazon-ppc-management', title: 'Amazon sponsored advertising', note: 'Our most popular service', text: 'Sponsored Products, Brands and Display campaigns built around profit.' },
-  { icon: '📺', slug: 'amazon-dsp', title: 'Amazon DSP', note: '', text: 'Display and video ads on and off Amazon that retarget shoppers and reach new buyers.' },
-  { icon: '🔎', slug: 'google-ads-for-amazon', title: 'Google Ads for Amazon', note: '', text: 'High-intent Google traffic sent straight to your Amazon listings.' },
-  { icon: '📝', slug: 'listing-optimization', title: 'Amazon listing optimization', note: '', text: 'Titles, bullets, images and A+ Content written to rank and convert.' },
-  { icon: '🏪', slug: 'storefront-design', title: 'Amazon Storefront design', note: '', text: 'A Brand Store that looks like your brand and sells like your best listing.' },
-  { icon: '🔍', slug: 'ad-account-audit', title: 'A–Z Amazon Ad account audit', note: '', text: 'A deep review of your ads, listings and account health — free to start.' },
+  { icon: 'target', slug: 'amazon-ppc-management', title: 'Amazon sponsored advertising', note: 'Our most popular service', text: 'Sponsored Products, Brands and Display campaigns built around profit.' },
+  { icon: 'tv', slug: 'amazon-dsp', title: 'Amazon DSP', note: '', text: 'Display and video ads on and off Amazon that retarget shoppers and reach new buyers.' },
+  { icon: 'search', slug: 'google-ads-for-amazon', title: 'Google Ads for Amazon', note: '', text: 'High-intent Google traffic sent straight to your Amazon listings.' },
+  { icon: 'doc', slug: 'listing-optimization', title: 'Amazon listing optimization', note: '', text: 'Titles, bullets, images and A+ Content written to rank and convert.' },
+  { icon: 'store', slug: 'storefront-design', title: 'Amazon Storefront design', note: '', text: 'A Brand Store that looks like your brand and sells like your best listing.' },
+  { icon: 'audit', slug: 'ad-account-audit', title: 'A–Z Amazon Ad account audit', note: '', text: 'A deep review of your ads, listings and account health — free to start.' },
 ];
 
 const reviews = [
@@ -80,7 +81,7 @@ export default function Home() {
             </div>
             <div className="float-card fc-1">★★★★★ Excellent<small>5.0 client rated</small></div>
             <div className="float-card fc-2">✓ Amazon Ads Verified Partner</div>
-            <div className="float-card fc-3">📈 Monthly earning 15X<small>Growth, tracked weekly</small></div>
+            <div className="float-card fc-3"><Icon name="chart" size={17} /> Monthly earning 15X<small>Growth, tracked weekly</small></div>
           </div>
         </div>
       </section>
@@ -109,7 +110,7 @@ export default function Home() {
             <span className="eyebrow">Why Partner With StoreStride?</span>
             <h2 id="partner">Choosing an agency partner is hard</h2>
             <p className="lead">At StoreStride we put emphasis on clear, effective communication, transparency, accountability and trust. Combined with our expert knowledge of the field, it sets the stage for long-lasting, successful partnerships.</p>
-            <p><a className="btn" href="/contact">📞 Book a Call</a></p>
+            <p><a className="btn" href="/contact"><Icon name="phone" size={17} /> Book a Call</a></p>
           </div>
           <div className="card">
             <p className="quote">“A professional service so aligned with your revenue goals and communication style, you&apos;ll swear it&apos;s your own in-house team.”</p>
@@ -127,7 +128,7 @@ export default function Home() {
           <div className="grid grid-3" style={{ marginTop: 24 }}>
             {secret.map((s) => (
               <article className="card" key={s.title}>
-                <div className="icon" aria-hidden="true">{s.icon}</div>
+                <div className="icon" aria-hidden="true"><Icon name={s.icon} size={28} /></div>
                 <h3>{s.title}</h3><p>{s.text}</p>
                 <p><a href="/contact"><b>Get a Quote →</b></a></p>
               </article>
@@ -146,11 +147,11 @@ export default function Home() {
         <div className="container">
           <span className="eyebrow">Our Services</span>
           <h2 id="services">Explore the ways our experts can contribute to your growth</h2>
-          <p><a className="btn" href="/contact">📞 Book a Call</a></p>
+          <p><a className="btn" href="/contact"><Icon name="phone" size={17} /> Book a Call</a></p>
           <div className="grid grid-3" style={{ marginTop: 24 }}>
             {homeServices.map((s) => (
               <article className="card" key={s.slug}>
-                <div className="icon" aria-hidden="true">{s.icon}</div>
+                <div className="icon" aria-hidden="true"><Icon name={s.icon} size={28} /></div>
                 {s.note && <span className="tag tag-orange">{s.note}</span>}
                 <h3>{s.title}</h3><p>{s.text}</p>
                 <p><a href={`/services/${s.slug}`}><b>Learn More →</b></a></p>
