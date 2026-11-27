@@ -61,6 +61,8 @@ const jsonLd = {
   ],
 };
 
+import Navbar from '@/components/Navbar';
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-GB">
@@ -68,18 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body className={inter.className}>
-        <header className="site">
-          <div className="container nav">
-            <a className="logo" href="/" aria-label="StoreStride home">Store<span>Stride</span></a>
-            <nav className="nav-links" aria-label="Main navigation">
-              <a href="/services">Services</a>
-              <a href="/case-studies">Case Studies</a>
-              <a href="/pricing">Pricing</a>
-              <a href="/contact">Contact</a>
-            </nav>
-            <a className="btn" href="/contact">Free Audit</a>
-          </div>
-        </header>
+        <Navbar />
         <main>{children}</main>
         <footer className="site">
           <div className="container footer-grid">
@@ -87,21 +78,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <h3>StoreStride</h3>
               <p>Full-funnel Amazon advertising agency helping brands scale revenue with data-driven PPC strategies and transparent, no-fluff reporting.</p>
               <p>Amazon Ads Partner Network Member · Helium 10 Partner · PickFu Certified</p>
+              <p><a className="btn" href="/contact">📞 Book a Call</a></p>
             </div>
             <div>
               <h4>Services</h4>
-              <p><a href="/services">Sponsored Products</a><br /><a href="/services">Sponsored Brands</a><br /><a href="/services">Amazon DSP</a><br /><a href="/services">Brand Video Ads</a><br /><a href="/services">Account Management</a></p>
+              <p><a href="/services/amazon-ppc-management">PPC Management</a><br /><a href="/services/listing-optimization">Listing Optimization</a><br /><a href="/services/storefront-design">Storefront Design</a><br /><a href="/services/amazon-dsp">DSP Management</a><br /><a href="/services/ad-account-audit">PPC Audit Service</a><br /><a href="/services/google-ads-for-amazon">Google Ads</a><br /><a href="/services/full-account-management">Full Account Management</a><br /><a href="/services/sponsored-brand-video">Brand Video</a></p>
             </div>
             <div>
-              <h4>Company</h4>
-              <p><a href="/case-studies">Case Studies</a><br /><a href="/pricing">Pricing</a><br /><a href="/contact">Contact Us</a><br /><a href="/">Our Process</a></p>
+              <h4>More Info</h4>
+              <p><a href="/team">About Us / Team</a><br /><a href="/podcast">Podcast</a><br /><a href="/contact">Contact</a><br /><a href="/case-studies">Case Studies</a></p>
+              <h4>Resources</h4>
+              <p><a href="/blog">Blog</a><br /><a href="/checklist">Ultimate PPC Checklist</a><br /><a href="/#tools">Free Calculators</a></p>
             </div>
             <div>
               <h4>Get In Touch</h4>
               <p><a href="mailto:amzservices@storestride.com">amzservices@storestride.com</a><br /><a href="tel:+447950471970">+44 7950 471 970</a><br />13 Holdich Street<br />Peterborough, PE3 6DH, England, UK</p>
+              <p>Subscribe to our newsletter — <a href="/contact">get the free PPC audit guide</a>.</p>
             </div>
           </div>
-          <div className="container"><p style={{ marginTop: 28, fontSize: '.85rem' }}>© 2026 StoreStride. All rights reserved.</p></div>
+          <div className="container"><p style={{ marginTop: 28, fontSize: '.85rem' }}>© 2026 StoreStride. All rights reserved. · <a href="/contact">Privacy Policy</a> · <a href="/contact">Terms &amp; Conditions</a></p></div>
         </footer>
       </body>
     </html>
