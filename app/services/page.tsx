@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { services } from '@/lib/services';
+import Icon from '@/components/Icons';
 
 export const metadata: Metadata = {
   title: 'Amazon Services | StoreStride — PPC, DSP, Listings & Full Account Management',
@@ -22,13 +23,13 @@ export default function Services() {
           <div className="grid grid-3">
             {services.map((s) => (
               <article className="card" key={s.slug}>
-                <div className="icon" aria-hidden="true">{s.icon}</div>
+                <div className="icon" aria-hidden="true"><Icon name={s.icon} size={28} /></div>
                 <h3>{s.title}</h3><p>{s.short}</p>
                 <p><a href={`/services/${s.slug}`}><b>Learn More →</b></a></p>
               </article>
             ))}
           </div>
-          <p style={{ marginTop: 28 }}><a className="btn btn-pulse" href="/contact">📞 Book a Call — Free Audit First</a></p>
+          <p style={{ marginTop: 28 }}><a className="btn btn-pulse" href="/contact"><Icon name="phone" size={17} /> Book a Call — Free Audit First</a></p>
         </div>
       </section>
     </>
