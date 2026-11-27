@@ -18,7 +18,7 @@ h1{font-size:clamp(2.3rem,5.2vw,4rem)}
 h2{font-size:clamp(1.8rem,3.6vw,2.6rem)}
 h3{font-size:1.2rem}
 p{margin:0 0 14px;color:var(--muted)}
-.container{max-width:1180px;margin:0 auto;padding:0 20px}
+.container{max-width:none;width:100%;margin:0 auto;padding:0 clamp(20px,4vw,64px)}
 .section{padding:84px 0}
 .section-soft{background:var(--bg-soft)}
 .section-navy{background:linear-gradient(160deg,var(--navy-deep),var(--navy) 60%,#0A5A78);color:#fff}

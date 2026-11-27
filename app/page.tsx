@@ -133,6 +133,37 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Who we work with — niches with real results, like the top agency sites */}
+      <section className="section" aria-labelledby="niches">
+        <div className="container">
+          <span className="eyebrow">Who We Work With</span>
+          <h2 id="niches">Brands like yours — and the numbers to prove it</h2>
+          <p className="lead">Home &amp; Garden is our primary niche, with deep experience across pet, beauty, baby, supplements and launches.</p>
+          <div className="grid grid-3" style={{ marginTop: 24 }}>
+            <article className="card"><img className="img-card" src="/images/supplements.jpg" alt="Supplement capsules and vitamins" /><h3>Supplements</h3><p><b>$1.5M in 12 months</b> · 40% net margin — Amazon PPC only, no social media, no external traffic.</p></article>
+            <article className="card"><img className="img-card" src="/images/home.jpg" alt="Cozy home interior with a blanket on the sofa" /><h3>Home &amp; Garden</h3><p><b>+71% revenue in 2 months</b> · 200% ROAS — rebuilt keyword structure after the owner nearly pulled the plug on ads.</p></article>
+            <article className="card"><img className="img-card" src="/images/dogs.jpg" alt="Happy dogs running outdoors" /><h3>Pet Supplies</h3><p><b>$1.2M a year</b> · 6× from $200K — DSP + Sponsored Display retargeting on core terms.</p></article>
+            <article className="card"><img className="img-card" src="/images/baby.jpg" alt="Baby products for new parents" /><h3>Baby Products</h3><p><b>TACOS 25% → 4%</b> · 84% cut — same sales, far less wasted spend.</p></article>
+            <article className="card"><img className="img-card" src="/images/checkout.jpg" alt="Customers shopping for beauty products online" /><h3>Beauty &amp; Health</h3><p><b>3× ROAS</b> · page 1 in 6 months — brand new, zero reviews, exact-match rank building.</p></article>
+            <article className="card"><img className="img-card" src="/images/warehouse.jpg" alt="Amazon warehouse shelves packed with products ready to ship" /><h3>Product Launches</h3><p><b>+$100K sales in 60 days</b> — plus +£40K a month extra at £0 extra spend on an established account.</p></article>
+          </div>
+        </div>
+      </section>
+
+      {/* Three ways to work with us — the engagement models top agencies show */}
+      <section className="section section-soft" aria-labelledby="ways">
+        <div className="container">
+          <span className="eyebrow">Three Ways To Work With Us</span>
+          <h2 id="ways">Pick the level of help you actually need</h2>
+          <div className="grid grid-3" style={{ marginTop: 24 }}>
+            <article className="card"><h3>Consulting</h3><p>A written plan from senior specialists — audit findings, keyword plan and bid strategy — then your team runs it.</p><p><b>Best for:</b> sellers with an in-house team who want a senior second pair of eyes.</p><p><a href="/contact"><b>Get a Quote →</b></a></p></article>
+            <article className="card"><h3>PPC Only</h3><p>We run your ads, you run the rest. Sponsored Products, Brands and Display plus DSP, optimised daily and judged on profit and TACOS.</p><p><b>Best for:</b> brands with strong listings who just need profitable ads.</p><p><a href="/contact"><b>Get a Quote →</b></a></p></article>
+            <article className="card card-dark"><h3>Full-Service</h3><p>Your whole Amazon channel, end to end — PPC, DSP, listings, SEO, A+ Content, brand and full account management, with one team accountable for revenue and profit.</p><p><b>Best for:</b> brands that want a single partner, not five freelancers.</p><p><a className="btn" href="/contact">Book a Call →</a></p></article>
+          </div>
+          <p style={{ marginTop: 20 }}>Every plan starts with a free audit and a custom quote — no hidden fees, no long-term lock-in, month to month.</p>
+        </div>
+      </section>
+
       {/* The secret to our success — 5 cards */}
       <section className="section" aria-labelledby="secret">
         <div className="container">
