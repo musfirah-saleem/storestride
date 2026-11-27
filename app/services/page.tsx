@@ -1,33 +1,36 @@
 import type { Metadata } from 'next';
-import AuditForm from '@/components/AuditForm';
+import { services } from '@/lib/services';
 
 export const metadata: Metadata = {
-  title: 'Amazon PPC Services',
-  description: 'StoreStride Amazon PPC services: Sponsored Products, Sponsored Brands, Sponsored Display, Amazon DSP, Brand Video, listing optimisation, listing creation and full account management.',
+  title: 'Amazon Services | StoreStride — PPC, DSP, Listings & Full Account Management',
+  description: 'All 8 StoreStride Amazon services: PPC management, DSP, Google Ads for Amazon, listing optimisation, storefront design, full account management, ad account audit and Brand Video.',
   alternates: { canonical: '/services' },
 };
 
-const list = [
-  ['PPC Management', 'Sponsored Products, Brands & Display. Full campaign build, weekly optimisation, and monthly reporting. TACOS-led bids, keyword harvesting, negative pruning.'],
-  ['Amazon DSP', 'Re-engage high-intent shoppers on and off Amazon. Audience layering, retargeting and Amazon Marketing Cloud reporting.'],
-  ['Sponsored Brand Video', 'High-converting auto-play video ads in search results — one of Amazon’s highest click-through formats.'],
-  ['Listing Optimisation', 'Title, bullets, description, backend keywords and A+ Content — written to rank and convert.'],
-  ['Listing Creation', 'Complete listing from scratch — keyword research through to A+ Content — so you start selling from day one.'],
-  ['Keyword Research', 'Deep keyword discovery, search volume analysis and competitor keyword gap mapping.'],
-  ['Product Launch', 'Launch strategy, ranking campaigns and review generation to get new products to page one fast.'],
-  ['Full Account Management', 'End-to-end Amazon management: ads, listings, inventory planning, Brand Registry and growth strategy.'],
-];
-
 export default function Services() {
   return (
-    <section className="section"><div className="container">
-      <span className="eyebrow">Our Services</span>
-      <h1>Tailored to Your Account &amp; Goals</h1>
-      <p className="lead">Every brand is different — ad spend, category, competition and growth stage all affect what the right strategy looks like. We scope every engagement individually so you only pay for what your account actually needs.</p>
-      <div className="grid grid-2" style={{ marginTop: 28 }}>
-        {list.map(([t, d]) => (<article className="card" key={t}><h3>{t}</h3><p>{d}</p></article>))}
-      </div>
-      <div style={{ marginTop: 36 }}><AuditForm /></div>
-    </div></section>
+    <>
+      <section className="hero-light">
+        <div className="container">
+          <span className="eyebrow">Our Services</span>
+          <h1>Amazon services we run for you</h1>
+          <p className="lead">Every service is managed by in-house specialists, supported by data from 50+ Amazon accounts. Pick one — or let us run the whole account.</p>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
+          <div className="grid grid-3">
+            {services.map((s) => (
+              <article className="card" key={s.slug}>
+                <div className="icon" aria-hidden="true">{s.icon}</div>
+                <h3>{s.title}</h3><p>{s.short}</p>
+                <p><a href={`/services/${s.slug}`}><b>Learn More →</b></a></p>
+              </article>
+            ))}
+          </div>
+          <p style={{ marginTop: 28 }}><a className="btn btn-pulse" href="/contact">📞 Book a Call — Free Audit First</a></p>
+        </div>
+      </section>
+    </>
   );
 }
