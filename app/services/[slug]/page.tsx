@@ -23,6 +23,18 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
   const s = services.find((x) => x.slug === params.slug);
   if (!s) notFound();
   const others = services.filter((x) => x.slug !== s.slug).slice(0, 4);
+  // Real photo per service — bundled with the site, no hotlinks.
+  const serviceImg: Record<string, { src: string; alt: string }> = {
+    'amazon-ppc-management': { src: '/images/analytics.jpg', alt: 'Advertising performance charts on a laptop' },
+    'amazon-dsp': { src: '/images/warehouse.jpg', alt: 'Amazon warehouse shelves packed with products' },
+    'google-ads-for-amazon': { src: '/images/checkout.jpg', alt: 'Customers checking out online' },
+    'amazon-listing-optimization': { src: '/images/supplements.jpg', alt: 'Supplement products, optimised listings' },
+    'amazon-storefront-design': { src: '/images/home.jpg', alt: 'A beautifully styled home storefront look' },
+    'full-account-management': { src: '/images/meeting.jpg', alt: 'StoreStride specialists planning a client account' },
+    'a-z-ad-account-audit': { src: '/images/analytics.jpg', alt: 'Deep dive into ad account data' },
+    'sponsored-brand-video': { src: '/images/hero-team.jpg', alt: 'The StoreStride team at work' },
+  };
+  const img = serviceImg[s.slug] ?? { src: '/images/hero-team.jpg', alt: 'The StoreStride team at work' };
   return (
     <>
       {/* Hero — light, Pathfinder-style, with floating stat cards */}
@@ -37,9 +49,10 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           <div className="hero-visual fade-up-2">
             <div className="hero-shape" />
             <div className="hero-photo">
-              <div>
+              <img src={img.src} alt={img.alt} />
+              <div className="hero-photo-caption">
                 <p className="big">{s.stats[0].metric}</p>
-                <p style={{ color: '#fff' }}>{s.stats[0].label}</p>
+                <p>{s.stats[0].label}</p>
               </div>
             </div>
             <div className="float-card fc-1">★★★★★ Excellent<small>5.0 client rated</small></div>
