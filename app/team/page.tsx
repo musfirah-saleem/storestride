@@ -22,6 +22,7 @@ export default function Team() {
           <span className="eyebrow">About Us</span>
           <h1>Team of Amazon PPC experts</h1>
           <p className="lead">When you work with StoreStride, you work directly with senior Amazon advertising specialists — not junior account managers.</p>
+          <img className="img-card img-card-tall" src="/images/hero-team.jpg" alt="The StoreStride team working together on client campaigns" style={{ marginTop: 20 }} />
         </div>
       </section>
       <section className="section">
